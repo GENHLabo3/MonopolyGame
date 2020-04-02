@@ -4,8 +4,7 @@ import main.java.Cup;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CupTest {
 
@@ -26,4 +25,10 @@ public class CupTest {
         }
     }
 
+    @Test
+    void rollWithNoDice() {
+        Cup emptyCup = new Cup(0);
+        emptyCup.roll();
+        assertEquals(0, emptyCup.getTotal());
+    }
 }
