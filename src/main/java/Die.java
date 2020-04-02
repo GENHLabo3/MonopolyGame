@@ -6,7 +6,7 @@ public class Die {
 
     private static int TOTAL_FACES = 6;
 
-    int faceValue;
+    int faceValue = -1;
 
     public Die() {}
 
@@ -16,6 +16,9 @@ public class Die {
     }
 
     public int getFaceValue() {
+        if(faceValue == -1)
+            throw new RuntimeException("The die has not been rolled.");
+
         return faceValue;
     }
 
