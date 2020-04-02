@@ -3,8 +3,8 @@ import java.util.Arrays;
 
 public class Piece {
 
-    PiecesName name;
-    static ArrayList<PiecesName> piecePool = new ArrayList<>(Arrays.asList(PiecesName.values()));
+    private PiecesName name;
+    public static ArrayList<PiecesName> piecePool = new ArrayList<>(Arrays.asList(PiecesName.values()));
 
     public Piece(PiecesName name) {
         if(!piecePool.contains(name)){
