@@ -2,6 +2,7 @@ package test.java;
 
 import main.java.Cup;
 import main.java.Die;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
@@ -19,13 +20,9 @@ public class DieTest {
 
     @Test
     void testFaceValueNotRolled() {
-        try{
-            Die die = new Die();
-            die.getFaceValue();
-            fail("Exception not thrown");
-        }catch(Exception e){
-            // OK an exception has been thrown
-        }
+        Assertions.assertThrows(RuntimeException.class, ()->
+                new Die().getFaceValue()
+        );
     }
 
 }

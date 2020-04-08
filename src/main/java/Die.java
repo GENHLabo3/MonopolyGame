@@ -6,7 +6,7 @@ public class Die {
 
     private static int TOTAL_FACES = 6;
 
-    int faceValue = -1;
+    private int faceValue = -1;
 
     public Die() {}
 

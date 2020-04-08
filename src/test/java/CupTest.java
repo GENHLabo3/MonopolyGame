@@ -1,8 +1,11 @@
 package test.java;
 
 import main.java.Cup;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,19 +13,19 @@ public class CupTest {
 
     @RepeatedTest(20)
     void cupRollsValue() {
-        Cup cup = new Cup(2);
+        Random rand = new Random();
+        int totalDice = rand.nextInt(20);
+        Cup cup = new Cup(totalDice);
         cup.roll();
-        assertTrue(2 <= cup.getTotal() && cup.getTotal() <= 12);
+        assertTrue(totalDice <= cup.getTotal()
+                && cup.getTotal() <= totalDice *  6);
     }
 
     @Test
     void negativeNumberOfDice() {
-        try{
-            Cup cup = new Cup(-1);
-            fail("Exception not thrown");
-        }catch(Exception e){
-            // OK an exception has been thrown
-        }
+        Assertions.assertThrows(RuntimeException.class, ()->
+                new Cup(-1)
+        );
     }
 
     @Test
