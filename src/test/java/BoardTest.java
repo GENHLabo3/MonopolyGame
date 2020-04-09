@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,30 +8,14 @@ class BoardTest {
     @Test
     void getSquareBound() {
         Board board = new Board();
-        board.getSquare(30, 12);
-    }
-
-    @Test
-    void getSquareWrongOldLocation(){
-        Board board = new Board();
-        try {
-            board.getSquare(42,12);
-            fail("Exception not thrown");
-        }catch(Exception e){
-            //OK
-        }
+        Square square = board.getSquare(board.getSquare(32),12);
+        assertEquals(square, board.getSquare(4));
     }
 
     @Test
     void getSquareWrongFvTot(){
         Board board = new Board();
-        try {
-            board.getSquare(20,13);
-            fail("Exception not thrown");
-        }catch(Exception e){
-            //OK
-        }
+        Assertions.assertThrows(RuntimeException.class, ()->
+                board.getSquare(board.getSquare(32),13));
     }
-
-
 }

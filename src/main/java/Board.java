@@ -5,7 +5,7 @@ public class Board {
 
     private static int TOTAL_SQUARES = 40;
 
-    private ArrayList<Square> squares = new ArrayList<>();
+    private ArrayList<Square> squares = new ArrayList<>(); //ordered
 
     public Board() {
         squares.add(new Square("Go"));
@@ -14,13 +14,15 @@ public class Board {
         }
     }
 
-    public Square getSquare(int oldLoc, int fvTot) {
-        if(oldLoc < 0 || oldLoc >= TOTAL_SQUARES){
-            throw new RuntimeException("Old location error");
-        }
+    public Square getSquare(Square oldLoc, int fvTot) {
         if(fvTot < 2 || fvTot > 12){
             throw new RuntimeException("fvTot error");
         }
-        return squares.get((oldLoc + fvTot) % TOTAL_SQUARES);
+        return squares.get((squares.indexOf(oldLoc) + fvTot) % TOTAL_SQUARES);
     }
+
+    public Square getSquare(int pos){
+        return squares.get(pos);
+    }
+
 }
