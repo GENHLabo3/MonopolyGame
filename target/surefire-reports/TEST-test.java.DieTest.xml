@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="test.java.DieTest" time="0.005" tests="21" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\HEIG-TIC\JAVA_Projects\MonopolyGame\target\test-classes;D:\HEIG-TIC\JAVA_Projects\MonopolyGame\target\classes;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.1\junit-jupiter-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.1\junit-jupiter-api-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Stephane\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Stephane\.m2\repository\org\junit\platform\junit-platform-commons\1.4.1\junit-platform-commons-1.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.1\junit-jupiter-params-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.1\junit-jupiter-engine-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\platform\junit-platform-engine\1.4.1\junit-platform-engine-1.4.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="CH"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_161\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Stephane\AppData\Local\Temp\surefire8126603648069884339\surefirebooter7118660891218783913.jar C:\Users\Stephane\AppData\Local\Temp\surefire8126603648069884339 2020-04-08T09-14-13_114-jvmRun1 surefire2036944557183694785tmp surefire_02330102767473642113tmp"/>
+    <property name="surefire.test.class.path" value="D:\HEIG-TIC\JAVA_Projects\MonopolyGame\target\test-classes;D:\HEIG-TIC\JAVA_Projects\MonopolyGame\target\classes;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.1\junit-jupiter-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.1\junit-jupiter-api-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Stephane\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Stephane\.m2\repository\org\junit\platform\junit-platform-commons\1.4.1\junit-platform-commons-1.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.1\junit-jupiter-params-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.1\junit-jupiter-engine-5.4.1.jar;C:\Users\Stephane\.m2\repository\org\junit\platform\junit-platform-engine\1.4.1\junit-platform-engine-1.4.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Stephane"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_161\jre"/>
+    <property name="basedir" value="D:\HEIG-TIC\JAVA_Projects\MonopolyGame"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Stephane\AppData\Local\Temp\surefire8126603648069884339\surefirebooter7118660891218783913.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_161\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="java.runtime.version" value="1.8.0_161-b12"/>
+    <property name="user.name" value="Stephane"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="localRepository" value="C:\Users\Stephane\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Stephane\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_161"/>
+    <property name="user.dir" value="D:\HEIG-TIC\JAVA_Projects\MonopolyGame"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_161\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\apache-maven-3.6.3\bin;C:\Program Files (x86)\Java\jre1.8.0_161\bin\;C:\Program Files (x86)\Java\jre1.8.0_241\bin\;C:\MinGW\bin\;C:\MinGW\mysys\1.0\bin\;C:\Windows\System32;D:\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Stephane\AppData\Local\GitHubDesktop\bin;C:\Users\Stephane\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\Stephane\AppData\Roaming\npm;C:\Program Files (x86)\Java\jdk1.8.0_161\bin;C:\Program Files (x86)\Java\jre1.8.0_161\bin;;D:\Docker Toolbox;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.161-b12"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_161\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testFaceValueNotRolled" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[1]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[2]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[3]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[4]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[5]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[6]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[7]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[8]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[9]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[10]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[11]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[12]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[13]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[14]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[15]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[16]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[17]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[18]" classname="test.java.DieTest" time="0.001"/>
+  <testcase name="dieRollRangeTests[19]" classname="test.java.DieTest" time="0"/>
+  <testcase name="dieRollRangeTests[20]" classname="test.java.DieTest" time="0"/>
+</testsuite>
