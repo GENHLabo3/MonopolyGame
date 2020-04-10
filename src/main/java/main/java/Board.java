@@ -1,3 +1,5 @@
+package main.java;
+
 import java.util.ArrayList;
 
 
@@ -10,7 +12,7 @@ public class Board {
     public Board() {
         squares.add(new Square("Go"));
         for (int i = 1; i < TOTAL_SQUARES; i++) {
-            squares.add(new Square("Square " + i));
+            squares.add(new Square("main.java.Square " + i));
         }
     }
 

@@ -1,7 +1,9 @@
+package test.java;
+
+import main.java.Board;
+import main.java.Square;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BoardTest {
 
@@ -9,8 +11,9 @@ class BoardTest {
     void getSquareBound() {
         Board board = new Board();
         Square square = board.getSquare(board.getSquare(32),12);
-        assertEquals(square, board.getSquare(4));
+        Assertions.assertEquals(square, board.getSquare(4));
     }
+
 
     @Test
     void getSquareWrongFvTot(){
