@@ -8,6 +8,10 @@ public class Piece {
 
     private Square location;
 
+    public Piece(){
+        this(piecePool.get(0));
+    }
+
     public Piece(PiecesName name) {
         if(!piecePool.contains(name)){
             throw new IllegalArgumentException("Token already taken");

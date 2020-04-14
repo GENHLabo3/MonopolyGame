@@ -1,7 +1,3 @@
-package test.java;
-
-import main.java.Board;
-import main.java.Square;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
