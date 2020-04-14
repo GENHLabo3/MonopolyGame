@@ -14,6 +14,7 @@ public class Piece {
         }
         this.name = name;
         piecePool.remove(name);
+        location = Board.getFirstSquare();
     }
 
     public Square getLocation(){
