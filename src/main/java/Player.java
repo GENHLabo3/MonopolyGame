@@ -23,6 +23,9 @@ public class Player {
         return piece;
     }
 
+    /**
+     * Roll dice and move the player to the corresponding location
+     */
     public void takeTurn() {
         int fv = 0 ;
 
