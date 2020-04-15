@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class MGame {
 
-    private ArrayList<Die> dice;
     private ArrayList<Player> players;
     private Board board;
+    private Cup cup;
 
     private final static int TOTAL_TURN = 20;
 
@@ -19,16 +19,14 @@ public class MGame {
         if(totalPlayer > 8)
             throw new IllegalArgumentException("Too many players");
 
-        dice = new ArrayList<>();
-        dice.add(new Die());
-        dice.add(new Die());
+        cup = new Cup(2);
 
         board = new Board();
 
         players = new ArrayList<>();
 
         for(int i = 0; i < totalPlayer; ++i){
-            players.add(new Player("player"+i, new Piece(), board, dice));
+            players.add(new Player("player"+i, new Piece(), board, cup));
         }
     }
 

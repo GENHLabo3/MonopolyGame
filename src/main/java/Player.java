@@ -6,13 +6,18 @@ public class Player {
     private Piece piece;
 
     private Board board;
-    private ArrayList<Die> dice;
+    private Cup cup;
 
-    public Player(String name, Piece piece, Board board, ArrayList<Die> dice) {
+    private int cash;
+
+    private final static int START_CASH = 1500;
+
+    public Player(String name, Piece piece, Board board,Cup cup) {
         this.name = name;
         this.piece = piece;
         this.board = board;
-        this.dice = dice;
+        this.cup = cup;
+        cash = START_CASH;
     }
 
     public String getName() {
@@ -27,17 +32,33 @@ public class Player {
      * Roll dice and move the player to the corresponding location
      */
     public void takeTurn() {
-        int fv = 0 ;
 
-        for(Die die : dice){
-            die.roll();
-            fv += die.getFaceValue();
-        }
+        cup.roll();
+        int fv = cup.getTotal();
+
 
         Square oldLoc = piece.getLocation();
         Square newLoc = board.getSquare(oldLoc, fv);
+
         System.out.println("Current player : " +name);
         System.out.println("Square landed : " + newLoc.getName());
+        //landedOn(newLoc)
         piece.setLocation(newLoc);
+    }
+
+    public void setLocation(Square square){
+        piece.setLocation(square);
+    }
+
+    public void addCash(int amount){
+        cash += amount;
+    }
+
+    public int getNetWorth(){
+        return cash;
+    }
+
+    public void reduceCash(int amount){
+        cash -= amount;
     }
 }
