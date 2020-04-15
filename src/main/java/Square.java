@@ -1,5 +1,3 @@
-package main.java;
-
 /**
  * Class that represents a square of a monopoly board
  */

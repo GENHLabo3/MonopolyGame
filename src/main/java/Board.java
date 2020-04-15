@@ -1,5 +1,3 @@
-package main.java;
-
 import java.util.ArrayList;
 
 /**
@@ -9,7 +7,7 @@ public class Board {
 
     private static int TOTAL_SQUARES = 40;
 
-    private ArrayList<Square> squares = new ArrayList<>(); //ordered
+    private static ArrayList<Square> squares = new ArrayList<>(); //ordered
 
     /**
      * Board constructor
@@ -46,5 +44,13 @@ public class Board {
             throw new RuntimeException("Position out of range");
         }
         return squares.get(pos);
+    }
+
+    /**
+     * Get the first square
+     * @return the 1st square
+     */
+    public static Square getFirstSquare(){
+        return squares.get(0);
     }
 }
