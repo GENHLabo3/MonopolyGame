@@ -7,15 +7,23 @@ public class Board {
 
     private static int TOTAL_SQUARES = 40;
 
+    private static Square jail;
+
     private static ArrayList<Square> squares = new ArrayList<>(); //ordered
 
     /**
      * Board constructor
      */
     public Board() {
-        squares.add(new Square("Go"));
+        squares.add(new GoSquare("Go"));
         for (int i = 1; i < TOTAL_SQUARES; i++) {
-            squares.add(new Square("Square " + i));
+            if(i == 10 || i == 30){
+                squares.add(new IncomeTaxSquare("Square " + i));
+            } else if(i == 20){
+                squares.add(new GoToJailSquare("Square " + i));
+            } else {
+                squares.add(new RegularSquare("Square " + i));
+            }
         }
     }
 
