@@ -1,6 +1,3 @@
-package test.java;
-
-import main.java.Cup;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
