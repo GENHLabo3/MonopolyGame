@@ -28,7 +28,7 @@ class PlayerTest {
 
     @Test
     public void testSetLocation(){
-        player1.setLocation(new Square("Go"));
+        player1.setLocation(new GoSquare("Go"));
         Assertions.assertEquals("Go", player1.getPiece().getLocation().getName());
     }
 

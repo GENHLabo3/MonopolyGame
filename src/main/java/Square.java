@@ -23,6 +23,11 @@ public abstract class Square {
         return name;
     }
 
+    /**
+     * Action taht will be exectued on the player when he lands on this square
+     *
+     * @param p Player : player
+     */
     abstract public void landedOn(Player p);
 
 }

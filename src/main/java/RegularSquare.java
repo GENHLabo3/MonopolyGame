@@ -8,6 +8,11 @@ public class RegularSquare extends Square {
         super(name);
     }
 
+    /**
+     * Does nothing
+     *
+     * @param p Player : player
+     */
     @Override
     public void landedOn(Player p) {
     //Does nothing

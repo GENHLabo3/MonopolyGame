@@ -7,8 +7,6 @@ public class Board {
 
     private static int TOTAL_SQUARES = 40;
 
-    private static Square jail;
-
     private static ArrayList<Square> squares = new ArrayList<>(); //ordered
 
     /**
@@ -17,14 +15,11 @@ public class Board {
     public Board() {
         squares.add(new GoSquare("Go"));
         for (int i = 1; i < TOTAL_SQUARES; i++) {
-            if(i == 10 || i == 30){
-                squares.add(new IncomeTaxSquare("Square " + i));
-            } else if(i == 20){
-                squares.add(new GoToJailSquare("Square " + i));
-            } else {
                 squares.add(new RegularSquare("Square " + i));
-            }
         }
+        squares.set(7, new IncomeTaxSquare(squares.get(7).getName()));
+        squares.set(27, new IncomeTaxSquare(squares.get(27).getName()));
+        squares.set(30, new GoToJailSquare(squares.get(30).getName(),squares.get(20)));
     }
 
     /**
