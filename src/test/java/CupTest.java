@@ -1,7 +1,3 @@
-package test.java;
-
-import main.java.Cup;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +19,7 @@ public class CupTest {
 
     @Test
     void negativeNumberOfDice() {
-        Assertions.assertThrows(RuntimeException.class, ()->
+        assertThrows(RuntimeException.class, ()->
                 new Cup(-1)
         );
     }
