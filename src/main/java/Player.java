@@ -40,8 +40,8 @@ public class Player {
         Square oldLoc = piece.getLocation();
         Square newLoc = board.getSquare(oldLoc, fv);
 
-        System.out.println("Current player : " +name);
-        System.out.println("Square landed : " + newLoc.getName());
+        //System.out.println("Current player : " +name);
+        //System.out.println("Square landed : " + newLoc.getName());
         //landedOn(newLoc)
         piece.setLocation(newLoc);
     }

@@ -8,11 +8,18 @@ public class Die {
 
     public Die() {}
 
+    /**
+     * Rolls the die
+     */
     public void roll() {
         Random rand = new Random();
         faceValue = rand.nextInt(TOTAL_FACES) + 1;
     }
 
+    /**
+     * Get the value of the rolled die
+     * @return the face value of the rolled die
+     */
     public int getFaceValue() {
         if(faceValue == -1)
             throw new RuntimeException("The die has not been rolled.");
