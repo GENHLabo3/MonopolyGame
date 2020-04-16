@@ -1,11 +1,13 @@
 public class GoSquare extends Square {
+
+    private static int cashToAdd = 200;
+
     /**
      * Square constructor
-     *
-     * @param name String : name of the square
      */
-    public GoSquare(String name) {
-        super(name);
+    public GoSquare() {
+        super("Go");
+
     }
 
     /**
@@ -15,6 +17,6 @@ public class GoSquare extends Square {
      */
     @Override
     public void landedOn(Player p) {
-        p.addCash(200);
+        p.addCash(cashToAdd);
     }
 }

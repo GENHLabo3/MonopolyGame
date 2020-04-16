@@ -13,7 +13,7 @@ public class Board {
      * Board constructor
      */
     public Board() {
-        squares.add(new GoSquare("Go"));
+        squares.add(new GoSquare());
         for (int i = 1; i < TOTAL_SQUARES; i++) {
                 squares.add(new RegularSquare("Square " + i));
         }

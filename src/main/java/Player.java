@@ -42,8 +42,8 @@ public class Player {
 
         System.out.println("Current player : " +name);
         System.out.println("Square landed : " + newLoc.getName());
-        newLoc.landedOn(this);
         piece.setLocation(newLoc);
+        newLoc.landedOn(this);
     }
 
     public void setLocation(Square square){
