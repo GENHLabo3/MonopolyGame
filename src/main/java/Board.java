@@ -13,10 +13,13 @@ public class Board {
      * Board constructor
      */
     public Board() {
-        squares.add(new Square("Go"));
+        squares.add(new GoSquare());
         for (int i = 1; i < TOTAL_SQUARES; i++) {
-            squares.add(new Square("Square " + i));
+                squares.add(new RegularSquare("Square " + i));
         }
+        squares.set(7, new IncomeTaxSquare(squares.get(7).getName()));
+        squares.set(27, new IncomeTaxSquare(squares.get(27).getName()));
+        squares.set(30, new GoToJailSquare(squares.get(30).getName(),squares.get(20)));
     }
 
     /**
