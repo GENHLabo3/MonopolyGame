@@ -14,11 +14,18 @@ public class Cup {
             dice.add(new Die());
     }
 
+    /**
+     * Rolls all the dice in the cup
+     */
     public void roll() {
         for(Die die : dice)
             die.roll();
     }
 
+    /**
+     * Get all the values of each dice
+     * @return total made from the rolls
+     */
     public int getTotal() {
         int total = 0;
 

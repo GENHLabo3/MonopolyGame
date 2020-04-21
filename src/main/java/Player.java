@@ -36,10 +36,6 @@ public class Player {
 
         loc = board.getSquare(loc, fv);
         loc.landedOn(this);
-
-        System.out.println("Current player : " + name);
-        System.out.println("Square landed : " + loc.getName());
-
     }
 
     public void setLocation(Square square) {

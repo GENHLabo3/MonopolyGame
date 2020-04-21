@@ -2,27 +2,30 @@ import java.util.ArrayList;
 
 public class MGame {
 
+    private final static int TOTAL_TURN  = 20;
+    private final static int TOTAL_DICE  = 2;
+    private final static int MIN_PLAYERS = 2;
+    private final static int MAX_PLAYERS = 8;
+
+    private final static String PLAYER_PREFIX = "player";
+
     private ArrayList<Player> players;
     private Board board;
     private Cup cup;
-
-    private final static int TOTAL_TURN = 20;
 
     /**
      * Init the simulation
      * @param totalPlayer total player in the simulation
      */
     public MGame(int totalPlayer) {
-        if(totalPlayer < 2)
+        if(totalPlayer < MIN_PLAYERS)
             throw new IllegalArgumentException("Too few players");
 
-        if(totalPlayer > 8)
+        if(totalPlayer > MAX_PLAYERS)
             throw new IllegalArgumentException("Too many players");
 
-        cup = new Cup(2);
-
-        board = new Board();
-
+        cup     = new Cup(TOTAL_DICE);
+        board   = new Board();
         players = new ArrayList<>();
 
         for(int i = 0; i < totalPlayer; ++i){
@@ -36,6 +39,7 @@ public class MGame {
      */
     public void playGame(){
         for(int i = 0; i < TOTAL_TURN; ++i){
+            System.out.println("------------- ROUND " + (i + 1) + "-------------");
             playRound();
         }
     }
@@ -46,6 +50,12 @@ public class MGame {
     private void playRound(){
         for(Player p : players){
             p.takeTurn();
+            displayPlayerState(p);
         }
+    }
+
+    private void displayPlayerState(Player player) {
+        System.out.println(player.getName() + " has " + player.getNetWorth() +
+                "$ on " + player.getLocation().getName());
     }
 }
