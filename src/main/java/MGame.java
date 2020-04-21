@@ -26,7 +26,8 @@ public class MGame {
         players = new ArrayList<>();
 
         for(int i = 0; i < totalPlayer; ++i){
-            players.add(new Player("player"+i, new Piece(), board, cup));
+            // Todo getter for go square ?
+            players.add(new Player("player"+i, board, cup));
         }
     }
 

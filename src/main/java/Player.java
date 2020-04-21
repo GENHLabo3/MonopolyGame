@@ -1,9 +1,7 @@
-import java.util.ArrayList;
-
 public class Player {
 
     private String name;
-    private Piece piece;
+    private Square loc;
 
     private Board board;
     private Cup cup;
@@ -12,9 +10,9 @@ public class Player {
 
     private final static int START_CASH = 1500;
 
-    public Player(String name, Piece piece, Board board,Cup cup) {
+    public Player(String name, Board board, Cup cup) {
         this.name = name;
-        this.piece = piece;
+        this.loc = board.getSquare(0);
         this.board = board;
         this.cup = cup;
         cash = START_CASH;
@@ -24,8 +22,8 @@ public class Player {
         return name;
     }
 
-    public Piece getPiece() {
-        return piece;
+    public Square getLocation() {
+        return loc;
     }
 
     /**
@@ -36,29 +34,27 @@ public class Player {
         cup.roll();
         int fv = cup.getTotal();
 
+        loc = board.getSquare(loc, fv);
+        loc.landedOn(this);
 
-        Square oldLoc = piece.getLocation();
-        Square newLoc = board.getSquare(oldLoc, fv);
+        System.out.println("Current player : " + name);
+        System.out.println("Square landed : " + loc.getName());
 
-        System.out.println("Current player : " +name);
-        System.out.println("Square landed : " + newLoc.getName());
-        piece.setLocation(newLoc);
-        newLoc.landedOn(this);
     }
 
-    public void setLocation(Square square){
-        piece.setLocation(square);
+    public void setLocation(Square square) {
+        loc = square;
     }
 
-    public void addCash(int amount){
+    public void addCash(int amount) {
         cash += amount;
     }
 
-    public int getNetWorth(){
+    public int getNetWorth() {
         return cash;
     }
 
-    public void reduceCash(int amount){
+    public void reduceCash(int amount) {
         cash -= amount;
     }
 }

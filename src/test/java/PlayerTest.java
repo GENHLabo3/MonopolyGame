@@ -1,11 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
     private static Board board ;
@@ -16,20 +11,13 @@ class PlayerTest {
     public static void init(){
         board = new Board();
         cup = new Cup(2);
-        player1 = new Player("Joe", new Piece(PiecesName.Penguin),board, cup);
-    }
-
-    @Test
-    public void testCreatePlayerWithATakenToken_ThrowException(){
-        Assertions.assertThrows(IllegalArgumentException.class, ()->
-                new Player("Joe", new Piece(PiecesName.Penguin), board, cup)
-        );
+        player1 = new Player("Joe", board, cup);
     }
 
     @Test
     public void testSetLocation(){
         player1.setLocation(new GoSquare());
-        Assertions.assertEquals("Go", player1.getPiece().getLocation().getName());
+        Assertions.assertEquals("Go", player1.getLocation().getName());
     }
 
     @Test
