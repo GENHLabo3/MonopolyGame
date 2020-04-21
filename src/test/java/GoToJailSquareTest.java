@@ -10,11 +10,11 @@ class GoToJailSquareTest {
     void landedOnJail() {
         Board  board = new Board();
         Cup cup = new Cup(2);
-        Player p = new Player("Joe", new Piece(PiecesName.Battleship), board, cup);
+        Player p = new Player("Joe", board, cup);
         Square jail = new RegularSquare("jail");
         Square square = new GoToJailSquare("test", jail);
         square.landedOn(p);
-        assertEquals(jail, p.getPiece().getLocation());
+        assertEquals(jail, p.getLocation());
     }
 
 }
