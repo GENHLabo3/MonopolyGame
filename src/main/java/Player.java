@@ -39,8 +39,8 @@ public class Player {
         Square oldLoc = piece.getLocation();
         Square newLoc = board.getSquare(oldLoc, fv);
 
-        //landedOn(newLoc)
         piece.setLocation(newLoc);
+        newLoc.landedOn(this);
     }
 
     public void setLocation(Square square){

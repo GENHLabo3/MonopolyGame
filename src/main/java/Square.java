@@ -1,7 +1,7 @@
 /**
  * Class that represents a square of a monopoly board
  */
-public class Square {
+public abstract class Square {
 
     private String name;
 
@@ -22,5 +22,12 @@ public class Square {
     public String getName() {
         return name;
     }
+
+    /**
+     * Action taht will be exectued on the player when he lands on this square
+     *
+     * @param p Player : player
+     */
+    abstract public void landedOn(Player p);
 
 }
