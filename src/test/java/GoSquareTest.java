@@ -14,6 +14,6 @@ class GoSquareTest {
         Player p = new Player("Joe", board, cup);
         Square square = new GoSquare();
         square.landedOn(p);
-        assertEquals(Player.START_CASH + GoSquare.cashToAdd, p.getNetWorth());
+        assertEquals(Player.START_CASH + GoSquare.CASH_TO_ADD, p.getNetWorth());
     }
 }
