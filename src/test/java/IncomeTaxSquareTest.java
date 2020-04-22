@@ -13,8 +13,18 @@ class IncomeTaxSquareTest {
         Player p = new Player("Joe", board, cup);
         Square square = new IncomeTaxSquare("test");
         square.landedOn(p);
-        assertEquals((1500 - 1500/10), p.getNetWorth());
+        assertEquals((Player.START_CASH - Player.START_CASH/IncomeTaxSquare.PERCENTAGE), p.getNetWorth());
     }
 
-    // TODO : test with 200$ instead of 10%
+    @Test
+    @DisplayName("Player with more than 2000$ landed on income tax pays 200$")
+    void landedOnIncomeWithMoreThan2000() {
+        Board  board = new Board();
+        Cup cup = new Cup(2);
+        Player p = new Player("Joe", board, cup);
+        p.addCash(1000);
+        Square square = new IncomeTaxSquare("test");
+        square.landedOn(p);
+        assertEquals((2500 - 200), p.getNetWorth());
+    }
 }
