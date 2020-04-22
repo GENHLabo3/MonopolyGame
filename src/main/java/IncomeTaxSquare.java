@@ -22,7 +22,7 @@ public class IncomeTaxSquare extends Square {
     @Override
     public void landedOn(Player p) {
         int w = p.getNetWorth();
-        p.reduceCash(min(maxTax,(w/100) * percentage));
+        p.reduceCash(min(maxTax, (w * percentage) / 100));
 
     }
 }
