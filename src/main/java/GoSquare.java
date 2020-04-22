@@ -1,7 +1,7 @@
 public class GoSquare extends Square {
 
     public final static int CASH_TO_ADD = 200;
-
+  
     /**
      * Square constructor
      */
