@@ -30,7 +30,7 @@ public class MGame {
 
         for(int i = 0; i < totalPlayer; ++i){
             // Todo getter for go square ?
-            players.add(new Player("player"+i, board, cup));
+            players.add(new Player(PLAYER_PREFIX + i, board, cup));
         }
     }
 
@@ -54,6 +54,11 @@ public class MGame {
         }
     }
 
+    /**
+     * Displays the state of a player :
+     *     ex : player1 has 1500$ on  Square 4
+     * @param player
+     */
     private void displayPlayerState(Player player) {
         System.out.println(player.getName() + " has " + player.getNetWorth() +
                 "$ on " + player.getLocation().getName());

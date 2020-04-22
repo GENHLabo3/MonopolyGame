@@ -1,7 +1,8 @@
 public class GoSquare extends Square {
 
-    public final static int cashToAdd = 200;
 
+    public final static int CASH_TO_ADD = 200;
+  
     /**
      * Square constructor
      */
@@ -17,6 +18,6 @@ public class GoSquare extends Square {
      */
     @Override
     public void landedOn(Player p) {
-        p.addCash(cashToAdd);
+        p.addCash(CASH_TO_ADD);
     }
 }

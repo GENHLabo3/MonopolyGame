@@ -1,7 +1,9 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -24,6 +26,7 @@ class PlayerTest {
 
 
     @Test
+    @DisplayName("Players start on the Go square")
     public void testSetLocation(){
         player1.setLocation(new GoSquare());
         Assertions.assertEquals("Go", player1.getLocation().getName());
@@ -31,6 +34,7 @@ class PlayerTest {
 
     @ParameterizedTest
     @ValueSource(ints = {100, 200})
+    @DisplayName("Adding 100 and 200 to player's cash")
     public void add100Cash(int amount){
         int cash = player1.getNetWorth();
         player1.addCash(amount);
@@ -38,9 +42,16 @@ class PlayerTest {
     }
 
     @Test
+    @DisplayName("Remove 100 from player's cash")
     public void reduce100Cash(){
         int cash = player1.getNetWorth();
         player1.reduceCash(100);
         Assertions.assertEquals(cash - 100, player1.getNetWorth());
+    }
+
+    @Test
+    @DisplayName("Check that the goSquare is initialized before the player")
+    public void goSquareCantBeNullWhenAPlayerIsCreate(){
+        Assertions.assertNotNull(player1.getLocation(), "The GoSquare is null");
     }
 }
