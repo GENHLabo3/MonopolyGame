@@ -24,7 +24,7 @@ public abstract class Square {
     }
 
     /**
-     * Action taht will be exectued on the player when he lands on this square
+     * Action that will be executed on the player when he lands on this square
      *
      * @param p Player : player
      */
