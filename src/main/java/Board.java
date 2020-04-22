@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class Board {
 
-    private static int TOTAL_SQUARES = 40;
+    public final static int TOTAL_SQUARES = 40;
 
     private static ArrayList<Square> squares = new ArrayList<>(); //ordered
 
