@@ -11,7 +11,7 @@ public class GoSquare extends Square {
     }
 
     /**
-     * Adds 200 to the player
+     * Adds a fixed amount of money to the player
      *
      * @param p Player : player
      */
