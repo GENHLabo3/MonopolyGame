@@ -11,6 +11,6 @@ class IncomeTaxSquareTest {
         Player p = new Player("Joe", board, cup);
         Square square = new IncomeTaxSquare("test");
         square.landedOn(p);
-        assertEquals((1500 - 1500/10), p.getNetWorth());
+        assertEquals((Player.START_CASH - Player.START_CASH/IncomeTaxSquare.percentage), p.getNetWorth());
     }
 }

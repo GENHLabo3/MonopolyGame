@@ -8,7 +8,7 @@ public class Player {
 
     private int cash;
 
-    private final static int START_CASH = 1500;
+    public final static int START_CASH = 1500;
 
     public Player(String name, Board board, Cup cup) {
         this.name = name;

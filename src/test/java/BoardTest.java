@@ -27,7 +27,7 @@ class BoardTest {
     @Test
     void squareNamesTest() {
         Assertions.assertEquals(board.getFirstSquare().getName(),"Go");
-        for (int i = 1; i < 40; i++) {
+        for (int i = 1; i < board.TOTAL_SQUARES; i++) {
             Assertions.assertEquals(board.getSquare(i).getName(), "Square " + i );
         }
     }

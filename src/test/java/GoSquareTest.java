@@ -7,11 +7,11 @@ class GoSquareTest {
 
     @Test
     void landedOnGo() {
-        Board  board = new Board();
+        Board board = new Board();
         Cup cup = new Cup(2);
         Player p = new Player("Joe", board, cup);
-       Square square = new GoSquare();
-       square.landedOn(p);
-       assertEquals(1700, p.getNetWorth());
+        Square square = new GoSquare();
+        square.landedOn(p);
+        assertEquals(Player.START_CASH + GoSquare.cashToAdd, p.getNetWorth());
     }
 }

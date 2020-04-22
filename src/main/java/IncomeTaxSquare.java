@@ -2,8 +2,8 @@ import static java.lang.Integer.min;
 
 public class IncomeTaxSquare extends Square {
 
-    final static int maxTax = 200;
-    final static int percentage = 10;
+    public final static int maxTax = 200;
+    public final static int percentage = 10;
 
     /**
      * Square constructor
@@ -22,7 +22,7 @@ public class IncomeTaxSquare extends Square {
     @Override
     public void landedOn(Player p) {
         int w = p.getNetWorth();
-        p.reduceCash(min(maxTax, (w * percentage) / 100));
+        p.reduceCash(min(maxTax, (w/100) * percentage));
 
     }
 }
