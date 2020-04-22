@@ -12,7 +12,7 @@ public class Player {
 
     public Player(String name, Board board, Cup cup) {
         this.name = name;
-        this.loc = board.getSquare(0);
+        this.loc = board.getFirstSquare();
         this.board = board;
         this.cup = cup;
         cash = START_CASH;

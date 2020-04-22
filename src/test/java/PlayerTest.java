@@ -1,7 +1,10 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class PlayerTest {
     private static Board board ;
@@ -9,11 +12,17 @@ class PlayerTest {
     private static Cup cup;
 
     @BeforeAll
-    public static void init(){
+    public static void initBoard() {
         board = new Board();
         cup = new Cup(2);
+
+    }
+
+    @BeforeEach
+    public void createPlayer(){
         player1 = new Player("Joe", board, cup);
     }
+
 
     @Test
     public void testSetLocation(){
@@ -21,11 +30,12 @@ class PlayerTest {
         Assertions.assertEquals("Go", player1.getLocation().getName());
     }
 
-    @Test
-    public void add100Cash(){
+    @ParameterizedTest
+    @ValueSource(ints = {100, 200})
+    public void add100Cash(int amount){
         int cash = player1.getNetWorth();
-        player1.addCash(100);
-        Assertions.assertEquals(cash + 100, player1.getNetWorth());
+        player1.addCash(amount);
+        Assertions.assertEquals(cash + amount, player1.getNetWorth());
     }
 
     @Test
