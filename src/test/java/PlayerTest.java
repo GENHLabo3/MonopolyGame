@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class PlayerTest {
@@ -32,5 +33,11 @@ class PlayerTest {
         int cash = player1.getNetWorth();
         player1.reduceCash(100);
         Assertions.assertEquals(cash - 100, player1.getNetWorth());
+    }
+
+    @Test
+    @DisplayName("Check that the goSquare is initialized before the player")
+    public void goSquareCantBeNullWhenAPlayerIsCreate(){
+        Assertions.assertNotNull(player1.getLocation(), "The GoSquare is null");
     }
 }
