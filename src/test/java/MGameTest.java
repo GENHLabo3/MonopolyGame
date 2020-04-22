@@ -27,10 +27,13 @@ class MGameTest {
         String[] expectedNames = {"player1", "player2", "player3", "player4"};
         MGame game = new MGame(4);
         String[] playerNames = new String[4];
-        for(int i = 0; i < game.getPlayers().size(); ++i)
+        for (int i = 0; i < game.getPlayers().size(); ++i)
             playerNames[i] = game.getPlayers().get(i).getName();
 
         assertArrayEquals(expectedNames, playerNames);
+    }
+
+    @Test
     @DisplayName("Player position is on GoSquare and had a 200 income")
     void landedOnGoSquare() {
         Board board = new Board();
