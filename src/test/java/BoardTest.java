@@ -20,7 +20,7 @@ class BoardTest {
     @Test
     void squareNamesTest() {
         Board board = new Board();
-        Assertions.assertEquals(board.getSquare(0).getName(),"Go");
+        Assertions.assertEquals(board.getFirstSquare().getName(),"Go");
         for (int i = 1; i < 40; i++) {
             Assertions.assertEquals(board.getSquare(i).getName(), "Square " + i );
         }

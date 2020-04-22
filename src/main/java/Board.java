@@ -53,7 +53,7 @@ public class Board {
      * Get the first square
      * @return the 1st square
      */
-    public static Square getFirstSquare(){
+    public Square getFirstSquare(){
         return squares.get(0);
     }
 }
