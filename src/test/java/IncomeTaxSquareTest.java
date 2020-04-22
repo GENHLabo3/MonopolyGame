@@ -25,6 +25,6 @@ class IncomeTaxSquareTest {
         p.addCash(1000);
         Square square = new IncomeTaxSquare("test");
         square.landedOn(p);
-        assertEquals((2500 - 200), p.getNetWorth());
+        assertEquals((Player.START_CASH + 1000 - IncomeTaxSquare.MAX_TAX), p.getNetWorth());
     }
 }

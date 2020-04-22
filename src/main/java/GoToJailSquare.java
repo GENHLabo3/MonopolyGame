@@ -1,5 +1,5 @@
 public class GoToJailSquare extends Square {
-    private Square jail;
+    private final Square JAIL;
 
     /**
      *
@@ -10,7 +10,7 @@ public class GoToJailSquare extends Square {
      */
     public GoToJailSquare(String name, Square jail) {
         super(name);
-        this.jail = jail;
+        this.JAIL = jail;
     }
 
 
@@ -20,6 +20,6 @@ public class GoToJailSquare extends Square {
      */
     @Override
     public void landedOn(Player p) {
-        p.setLocation(jail);
+        p.setLocation(JAIL);
     }
 }
