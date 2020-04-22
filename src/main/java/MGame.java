@@ -29,7 +29,6 @@ public class MGame {
         players = new ArrayList<>();
 
         for(int i = 1; i <= totalPlayer; ++i){
-            // Todo getter for go square ?
             players.add(new Player(PLAYER_PREFIX + i, board, cup));
         }
     }
@@ -56,7 +55,7 @@ public class MGame {
 
     /**
      * Displays the state of a player :
-     *     ex : player1 has 1500$ on  Square 4
+     *     ex : player1 has 1500$ on Square 4
      * @param player
      */
     private void displayPlayerState(Player player) {
