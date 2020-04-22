@@ -28,7 +28,7 @@ public class MGame {
         board   = new Board();
         players = new ArrayList<>();
 
-        for(int i = 0; i < totalPlayer; ++i){
+        for(int i = 1; i <= totalPlayer; ++i){
             // Todo getter for go square ?
             players.add(new Player("player"+i, board, cup));
         }
@@ -57,5 +57,13 @@ public class MGame {
     private void displayPlayerState(Player player) {
         System.out.println(player.getName() + " has " + player.getNetWorth() +
                 "$ on " + player.getLocation().getName());
+    }
+
+    /**
+     * Get the players of the current game
+     * @return players
+     */
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
 }
